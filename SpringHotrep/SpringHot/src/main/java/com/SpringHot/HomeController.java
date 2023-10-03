@@ -12,9 +12,7 @@ public class HomeController {
 
     @RequestMapping(value = "/")
     public String index() {
-        return "ControllerRequestMappingPublic " +
-                "" +
-                "";
+        return "index1";
     }
 
 }
