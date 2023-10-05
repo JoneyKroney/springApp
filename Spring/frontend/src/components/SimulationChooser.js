@@ -23,29 +23,29 @@ const [rulesets, changeRulesets] = useState(["ruleset1","ruleset2","ruleset3" ])
 
 
 return (
-    <div>
-        <Card style={{ width: '100%' }}>
+    
+        <Card className='simulation-chooser shadow-sm'>
               <Card.Body >
                 <Card.Title>Settings</Card.Title>
                 <ColoredLine color = 'black'/>
 
                        <Stack gap={3}>
-                      <Dropdown >
-                            <Dropdown.Toggle variant="success" id="dropdown-basic" className='width100p'> 
+                      <Dropdown bg='dark'>
+                            <Dropdown.Toggle variant="secondary" bg='dark' id="dropdown-basic" > 
                               Layouts
                             </Dropdown.Toggle>
 
-                            <Dropdown.Menu className='width100p textallign'>
+                            <Dropdown.Menu className=' '>
                               {layouts.map((layout, i)=><Dropdown.Item >{layout}</Dropdown.Item>)}
                             </Dropdown.Menu>
                       </Dropdown>
 
                       <Dropdown>
-                          <Dropdown.Toggle variant="success" id="dropdown-basic" className='width100p'>
+                          <Dropdown.Toggle variant="secondary" id="dropdown-basic" >
                             Rulesets
                           </Dropdown.Toggle>
 
-                          <Dropdown.Menu className='width100p textallign'>
+                          <Dropdown.Menu >
                             {rulesets.map((ruleset, i)=><Dropdown.Item >{ruleset}</Dropdown.Item>)}
                           </Dropdown.Menu>
                     </Dropdown>
@@ -53,13 +53,13 @@ return (
                               placeholder="Loops"
                               aria-label="Loops"
                               aria-describedby="basic-addon1"/>
-                    <Button variant="primary" size="md">Start</Button>
+                    <Button variant="primary" size="md">Run Simulation</Button>
                     </Stack>
 
               </Card.Body>
             </Card>
 
-    </div>
+    
 )
 }
 export default SimulationChooser;

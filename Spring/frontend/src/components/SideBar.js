@@ -10,7 +10,9 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Stack from 'react-bootstrap/Stack';
 import './page.css';
 import ColoredLine from './ColoredLine';
-
+import { MdSpaceDashboard } from "react-icons/md";
+import { BsFillPieChartFill, BsTools } from "react-icons/bs";
+// import { MdSpaceDashboard } from "react-icons/md";
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 
 
@@ -23,20 +25,23 @@ function SideBar() {
 
 
 return (
+    
+  <Card className='side-bar ' bg='dark' text='light' >
     <div>
-        <Card bg='dark height100' text='light' className='height100 borderrad0'>
-            <Card.Title>Super Cool Title</Card.Title>
-              <ColoredLine color='white'/>
-              
-                <Button>Button</Button>
-                <Button>Button</Button>
-              
-
-
-              <ColoredLine color='white'/>
-            </Card>
-
+      <Card.Title>Super Cool Title</Card.Title>
+      <ColoredLine color='white'/>
+      <Button><MdSpaceDashboard/> Dashboard</Button>
+      <Button><BsFillPieChartFill/> Reports</Button>
+      <Button><BsTools/> Simulation</Button>
     </div>
+
+    <div>
+      <ColoredLine color='white'/>
+      <Button variant="dark" >Signout</Button>
+    </div>
+  </Card>
+
+    
 )
 }
 export default SideBar;

@@ -5,8 +5,9 @@ return (
         style={{
             color: color,
             backgroundColor: color,
-            height: "2px",
-            margin: "5%"
+            height: "1px",
+            width: '100%',
+            
             
         }}
     />

@@ -3,47 +3,71 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Stack from 'react-bootstrap/Stack';
 import React, {useState, useEffect, useRef} from 'react';
 import './page.css';
 import ColoredLine from './ColoredLine';
+import Legend from './Legend';
 function SimulationCard() {
 
 
 const [displayArray, changeArray] = useState([
-  [1,2,3,4,5,6,7,8,9],
-  [1,2,3,4,5,6,7,8,9],
-  [1,2,3,4,5,6,7,8,9],
-  [1,2,3,4,5,6,7,8,9],
-  [1,2,3,4,5,6,7,8,9],
-  [1,2,3,4,5,6,7,8,9],
-  [1,2,3,4,5,6,7,8,9],
-  [1,2,3,4,5,6,7,8,9],
-  [1,2,3,4,5,6,7,8,9]
+  [0,0,0,0,0,0,0,0,0],
+  [0,0,0,0,0,0,0,0,0],
+  [1,1,0,0,0,0,0,0,0],
+  [3,3,1,1,1,1,1,0,0],
+  [1,3,1,0,0,0,1,0,0],
+  [1,3,3,2,1,0,1,0,0],
+  [0,1,1,1,1,4,1,0,0],
+  [0,0,0,0,1,1,1,0,0],
+  [0,0,0,0,0,0,0,0,0],
 ]);
 
+function backgroundChooser(value){
+  switch (value) {
+    case 0:
+      return 'open';
+      
+    case 1:
+      return 'wall';
+      
+    case 2:
+      return 'robot';
+     
+    case 3:
+      return 'path';
+    case 4:
+      return 'end';
 
+    default:
+      return 'open';
+      
+  }
+}
 
 
 return (
     <div>
-        <Card style={{  }}>
+        <Card className='shadow-sm simulation-card'>
               <Card.Body>
+              
                 <Card.Title>Simulation</Card.Title>
-                <ColoredLine color = 'black'/>
                 
-                <Card.Text>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
-                </Card.Text>
+                  <ColoredLine color='black'/>
+                
+                <Legend/>
+                
+                
 
                 <Container>
                   {displayArray.map((currentArr, i) => 
                   <Row>
-                    {currentArr.map((currentItem, i)=><Col className='border1'>{currentItem}</Col>)}
-                  </Row>)}
+                    {currentArr.map((currentItem, i)=><Col className={backgroundChooser(currentItem)} ></Col>)}
+                  </Row>
+                  )}
 
                 </Container>
-
+                
 
                 
               </Card.Body>
