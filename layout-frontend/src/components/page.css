@@ -1,0 +1,79 @@
+.open, .open:hover, .open:active{
+    background: #fff !important;
+}
+
+.wall, .wall:hover, .wall:active{
+    background: #ced4da !important;
+}
+
+.robot, .robot:hover, .robot:active{
+    background: #479f76 !important;
+}
+.path, .path:hover, .path:active{
+    background: #a3cfbb !important;
+}
+.end, .end:hover, .end:active{
+    background: #e35d6a !important;
+}
+
+
+
+.simulation-card {
+    width:100%;
+}
+
+.simulation-card >div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.simulation-card .type-picker {
+    padding: 0;
+}
+.simulation-card .type-picker > div, .simulation-card .type-picker > div > button{
+    width: 100%;
+}
+
+.simulation-card .type-picker > div > div{
+    min-width: 0
+}
+.simulation-card .type-picker > div > div > a >div{
+    height: 2rem;
+    width: 2rem;
+    border: #dee2e6 solid 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.legend{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: 1rem;
+}
+.legend > legend{
+    width: 10%;
+    font-size: 100%;
+    margin-right: 1px;
+}
+.legend > div{
+    height: 2rem;
+    width: 2rem;
+    border: #dee2e6 solid 1px;
+    
+}
+.legend > p, .legend > legend{
+    margin: 0 2.5rem 0 .5rem ;
+    align-self: center;
+}
+

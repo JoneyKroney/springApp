@@ -11,8 +11,9 @@ import Stack from 'react-bootstrap/Stack';
 import './page.css';
 import ColoredLine from './ColoredLine';
 import { MdSpaceDashboard } from "react-icons/md";
-import { BsFillPieChartFill, BsTools } from "react-icons/bs";
-// import { MdSpaceDashboard } from "react-icons/md";
+import { BsFillPieChartFill, BsTools, BsFillFileRuledFill } from "react-icons/bs";
+import {RiRobot2Fill} from "react-icons/ri"
+import { TfiLayoutGrid3Alt } from "react-icons/tfi";
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 
 
@@ -28,11 +29,13 @@ return (
     
   <Card className='side-bar ' bg='dark' text='light' >
     <div>
-      <Card.Title>Super Cool Title</Card.Title>
+      <Card.Title><RiRobot2Fill/> Capstone Project</Card.Title>
       <ColoredLine color='white'/>
-      <Button><MdSpaceDashboard/> Dashboard</Button>
-      <Button><BsFillPieChartFill/> Reports</Button>
-      <Button><BsTools/> Simulation</Button>
+      <Button variant="dark"><MdSpaceDashboard/>   Dashboard</Button>
+      <Button variant="dark"><BsFillFileRuledFill/> Rules</Button>
+      <Button               ><TfiLayoutGrid3Alt/>     Layout</Button>
+      <Button variant="dark"><BsTools/>            Simulation</Button>
+      <Button variant="dark"><BsFillPieChartFill/> Reports</Button>
     </div>
 
     <div>
