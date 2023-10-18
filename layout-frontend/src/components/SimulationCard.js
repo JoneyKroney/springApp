@@ -48,16 +48,15 @@ function backgroundChooser(value){
 }
 
 function changeArrayIndex(value, x, y){
-  changeArray((oldArray)=>{
-    console.log(x);
-    console.log(y);
-    console.log( "old " +oldArray[x][y]);
-    oldArray[x][y] = value;
-    console.log( "new " + oldArray[x][y]);
-    return oldArray; 
+        
+  changeArray((prevArray) => {
+    const newArray = [...prevArray]; // Create a copy of the original array
+    newArray[x][y] = value; // Update the specific index
+    return newArray;
 
-  })
-}
+
+  });}
+
 
 
 return (
@@ -84,9 +83,9 @@ return (
                         <Dropdown.Toggle variant="secondary" id="dropdown-basic" className={backgroundChooser(currentItem)}></Dropdown.Toggle>
                         <Dropdown.Menu >
                           <Dropdown.Item onClick={()=>{changeArrayIndex(0,i,j)}}><div className='open '></div></Dropdown.Item>
-                          <Dropdown.Item ><div className='wall '></div></Dropdown.Item>
-                          <Dropdown.Item ><div className='robot '></div></Dropdown.Item>
-                          <Dropdown.Item ><div className='end '></div></Dropdown.Item>
+                          <Dropdown.Item onClick={()=>{changeArrayIndex(1,i,j)}}><div className='wall '></div></Dropdown.Item>
+                          <Dropdown.Item onClick={()=>{changeArrayIndex(2,i,j)}}><div className='robot '></div></Dropdown.Item>
+                          <Dropdown.Item onClick={()=>{changeArrayIndex(4,i,j)}}><div className='end '></div></Dropdown.Item>
                         </Dropdown.Menu>
                       </Dropdown>
 

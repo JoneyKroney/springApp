@@ -47,33 +47,39 @@
 
 
 
-
-
-
-
-
-
-
 .legend{
-    width: 100%;
+    width: 90%;
     display: flex;
-    align-items: center;
+    
     justify-content: left;
     margin: 1rem;
 }
 .legend > legend{
-    width: 10%;
+    flex: 1;
     font-size: 100%;
-    margin-right: 1px;
+    
 }
 .legend > div{
+    flex:3;
+    display: flex;
+    justify-content: space-between;
+}
+.legend > div>div{
+    
+    display: flex;
+    
+    
+}
+
+.legend > div>div> div{
     height: 2rem;
     width: 2rem;
     border: #dee2e6 solid 1px;
     
 }
-.legend > p, .legend > legend{
-    margin: 0 2.5rem 0 .5rem ;
-    align-self: center;
+.legend > div>div> p{
+    margin-left:.5rem;
+    
 }
+
 
