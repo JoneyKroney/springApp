@@ -10,7 +10,7 @@ import ColoredLine from './ColoredLine';
 import Legend from './Legend';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
-function SimulationCard() {
+function LayoutConfigurationCard() {
 
 
 const [displayArray, changeArray] = useState([
@@ -103,4 +103,4 @@ return (
     
 )
 }
-export default SimulationCard;
+export default LayoutConfigurationCard;
